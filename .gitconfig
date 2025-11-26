@@ -1,8 +1,0 @@
-[https]
-	proxy = http://villardn:Nathou26*@172.16.5.100:8080
-[credential "http://@172.16.5.100:8080"]
-	provider = generic
-[http]
-	proxy = http://villardn:Nathou26*@172.16.5.100:8080
-[credential "http://172.16.5.100:8080"]
-	provider = generic
