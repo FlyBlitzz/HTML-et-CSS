@@ -1,39 +1,19 @@
-/* CH2_3_Ex1_style.css */
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    color: #333;
+    color: white;
     min-height: 1500px;
-
-    /* 1. pingouin : fixe, non répété
-       2. feuilles : répétées en fond, défilent avec la page */
-    background-image: url('pingouin.png'), url('feuilles.png');
+    background-image: url('../Images/pingouin.png'), url('../Images/feuilles.png');
     background-repeat: no-repeat, repeat;
     background-attachment: fixed, scroll;
     background-position: center top, 0 0;
 }
 
-main {
-    width: 85%;
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.95);
-}
-
-/* H1 violet pour "test d'affectation de fonds en CSS3" */
-h1#titre-violet {
+h1.titre {
     color: #8A2BE2;
 }
 
 p.intro {
     font-style: italic;
-}
-
-/* liens classiques */
-a {
-    color: #0000EE;
-    text-decoration: underline;
 }

@@ -1,54 +1,36 @@
-/* Style par défaut du corps de la page */
 body {
     font-family: "Courier New", Courier, monospace;
     font-size: 12px;
     text-align: justify;
 }
 
-/* --- Titre et sous-titres principaux --- */
-
-/* Titre niveau 1 */
 h1 {
     font-family: Arial, sans-serif;
     font-size: 20px;
     color: red;
     text-align: center;
-    background-color: lightyellow; /* Jaune pâle */
+    background-color: lightyellow;
 }
 
-/* Les deux lignes suivantes, en Arial 16px violet, centrées */
 .sous-titre-centre {
     font-family: Arial, sans-serif;
     font-size: 16px;
-    color: violet;
+    color: purple;
     text-align: center;
-}
-
-/* Espacement avant la première ligne pour la première des deux lignes */
-.sous-titre-centre:first-child {
     text-indent: 20px;
-}
-
-/* Espacement vertical après la deuxième ligne */
-.sous-titre-centre:last-of-type {
     margin-bottom: 20px;
 }
 
-
-/* --- Paragraphes spécifiques --- */
-
-/* Les deux paragraphes d'introduction */
 .paragraphe-intro {
     font-family: Arial, sans-serif;
     font-size: 11px;
-    text-indent: 20px; /* Alinéa */
+    text-indent: 20px;
     margin-top: 25px;
     margin-bottom: 25px;
 }
 
-/* Le paragraphe en Times New Roman italique */
 .paragraphe-special {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", sans-serif;
     font-size: 12px;
     font-style: italic;
     margin-left: 1cm;
@@ -57,18 +39,16 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Le format standard pour la majorité des paragraphes */
 .paragraphe-standard {
-    text-indent: 12px; /* Retrait de la 1ère ligne */
+    text-indent: 12px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
-/* Le paragraphe avec puce et couleur bleu clair */
 .paragraphe-puce {
-    list-style-type: disc; /* Puce */
-    list-style-position: inside; /* Puce à l'intérieur du bloc de texte */
-    color: lightblue; /* Bleu clair */
+    list-style-type: disc;
+    list-style-position: inside;
+    color: lightblue;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -77,10 +57,6 @@ h1 {
     text-indent: 0;
 }
 
-
-/* --- Listes --- */
-
-/* Liste numérotée principale */
 .sections-principales {
     list-style-type: decimal;
     padding-left: 20px;
@@ -90,11 +66,9 @@ h1 {
     font-family: Arial, sans-serif;
     font-size: 15px;
     color: blue;
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-weight: bold;  
 }
 
-/* Liste non numérotée des sous-titres */
 .liste-sous-titres {
     list-style-type: none;
     padding-left: 0;
