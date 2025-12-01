@@ -1,0 +1,52 @@
+/* Style de base */
+body {
+    background-color: #555; /* couleur du fond du body */
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 samp {
+    font-family: monospace;
+}
+
+/* Style commun aux articles */
+article {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 10px dotted orange;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png');
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    background-position: top left;
+    min-height: 200px;
+}
+
+/* Article 1 : background-clip: border-box, background-origin: border-box */
+.article1 {
+    background-color: green;
+    background-clip: border-box;
+    background-origin: border-box;
+}
+
+/* Article 2 : background-clip: padding-box, background-origin: padding-box */
+.article2 {
+    background-color: teal;
+    background-clip: padding-box;
+    background-origin: padding-box;
+}
+
+/* Article 3 : background-clip: content-box, background-origin: content-box */
+.article3 {
+    background-color: violet;
+    background-clip: content-box;
+    background-origin: content-box;
+}
+
+a {
+    color: yellow;
+}

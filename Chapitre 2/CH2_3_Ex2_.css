@@ -1,0 +1,66 @@
+/* CH2_3_Ex2_style.css : Feuille de style pour l'exercice d'images vectorielles CSS3 */
+
+/* Configuration générale pour matcher l'exemple (styles simples, sans ombres ou bordures excessives) */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #000;
+    margin: 0;
+    padding: 10px;
+
+    /* Fond vectoriel du body : remplit tout l'espace (cover), complété par couleur verte */
+    background-image: url('../Images/pingouin.png'); /* Image vectorielle (pingouin fixe en bas pour matcher l'exemple) */
+    background-color: #008000; /* Vert comme dans l'exemple */
+    background-size: cover; /* Remplit tout l'espace de la page (selon la consigne), ajustez à 'auto' si vous ne voulez pas de déformation */
+    background-repeat: no-repeat;
+    background-position: center bottom; /* Positionné en bas pour matcher l'exemple */
+    background-attachment: fixed; /* Fixe par rapport au défilement */
+
+    min-height: 200vh; /* Pour tester le défilement et l'effet fixe */
+}
+
+section {
+    max-width: 100%;
+    margin: 0;
+}
+
+article {
+    padding: 20px;
+    margin: 0;
+
+    /* Deux fonds pour l'article (selon la consigne) :
+       1. Image vectorielle centrée, ne remplit que la zone centrale (contain, non pleine)
+       2. Seconde image fixe, non répétée (ici, un second pingouin fixe pour l'effet, mais positionné pour matcher) */
+    background-image: url('../Images/pingouin.png'); /* Image vectorielle centrale (pingouin pour matcher l'exemple) */
+    background-color: #ff0000; /* Rouge comme dans l'exemple, différent du body */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centrée dans l'article */
+    background-size: contain; /* Ne remplit que la zone centrale (pas tout l'article) */
+    background-attachment: scroll; /* Défile avec le contenu */
+}
+
+/* Styles des titres (simples, alignés à gauche comme dans l'exemple) */
+h1, h2 {
+    margin: 10px 0;
+    color: #000;
+}
+
+cite {
+    display: block;
+    margin: 10px 0;
+    font-style: normal;
+}
+
+p:last-child {
+    text-align: center;
+}
+
+/* Styles des liens (bleu classique comme dans l'exemple) */
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
