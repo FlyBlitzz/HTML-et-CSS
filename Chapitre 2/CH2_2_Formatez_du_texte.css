@@ -17,9 +17,10 @@ h1 {
     font-size: 16px;
     color: purple;
     text-align: center;
-    text-indent: 20px;
-    margin-bottom: 20px;
 }
+
+.sous-titre-centre:first-child { text-indent: 20px; }
+.sous-titre-centre:last-of-type { margin-bottom: 20px; }
 
 .paragraphe-intro {
     font-family: Arial, sans-serif;
@@ -30,7 +31,7 @@ h1 {
 }
 
 .paragraphe-special {
-    font-family: "Times New Roman", sans-serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 12px;
     font-style: italic;
     margin-left: 1cm;
@@ -53,9 +54,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.paragraphe-puce li {
-    text-indent: 0;
-}
+.paragraphe-puce li { text-indent: 0; }
 
 .sections-principales {
     list-style-type: decimal;

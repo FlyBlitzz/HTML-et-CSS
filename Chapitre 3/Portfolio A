@@ -1,0 +1,2110 @@
+Je vais te créer un portfolio complet et professionnel. Voici tous les fichiers nécessaires :
+
+---
+
+## Structure des fichiers
+
+```
+portfolio/
+├── index.html
+├── cv.html
+├── projets.html
+├── certifications.html
+├── veille.html
+├── stages.html
+├── passions.html
+├── contact.html
+├── css/
+│   └── style.css
+└── js/
+    └── script.js
+```
+
+---
+
+## 1. style.css (Fichier CSS principal)
+
+```css
+/* ========================================
+   PORTFOLIO - FEUILLE DE STYLE PRINCIPALE
+   ======================================== */
+
+/* ========== RESET ET BASE ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Couleurs principales */
+    --couleur-primaire: #2563eb;
+    --couleur-primaire-fonce: #1d4ed8;
+    --couleur-secondaire: #3b82f6;
+    --couleur-accent: #06b6d4;
+    --couleur-fond: #f8fafc;
+    --couleur-fond-carte: #ffffff;
+    --couleur-texte: #1e293b;
+    --couleur-texte-clair: #64748b;
+    --couleur-bordure: #e2e8f0;
+    --couleur-succes: #10b981;
+    --couleur-warning: #f59e0b;
+    --couleur-erreur: #ef4444;
+    
+    /* Ombres */
+    --ombre-legere: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --ombre-moyenne: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --ombre-forte: 0 10px 25px rgba(0, 0, 0, 0.15);
+    
+    /* Transitions */
+    --transition-rapide: 0.2s ease;
+    --transition-moyenne: 0.3s ease;
+    --transition-lente: 0.5s ease;
+    
+    /* Bordures arrondies */
+    --radius-petit: 5px;
+    --radius-moyen: 10px;
+    --radius-grand: 15px;
+    --radius-rond: 50%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========== HEADER / NAVIGATION ========== */
+header {
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
+    color: white;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--ombre-moyenne);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--couleur-accent);
+}
+
+/* Navigation principale */
+nav ul {
+    display: flex;
+    gap: 5px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    border-radius: var(--radius-petit);
+    transition: var(--transition-rapide);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Menu hamburger (mobile) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: var(--transition-rapide);
+}
+
+/* ========== MAIN CONTENT ========== */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+/* ========== SECTIONS ========== */
+section {
+    margin-bottom: 60px;
+}
+
+.section-titre {
+    font-size: 2rem;
+    color: var(--couleur-primaire);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--couleur-primaire);
+    display: inline-block;
+}
+
+.section-titre i {
+    margin-right: 10px;
+}
+
+/* ========== PAGE ACCUEIL ========== */
+.hero {
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-accent) 100%);
+    color: white;
+    padding: 80px 40px;
+    border-radius: var(--radius-grand);
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: var(--radius-rond);
+    border: 5px solid white;
+    margin-bottom: 25px;
+    object-fit: cover;
+    box-shadow: var(--ombre-forte);
+    animation: fadeInDown 1s ease;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.hero .sous-titre {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    margin-bottom: 25px;
+    animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+.hero .description {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+/* Boutons */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation: fadeInUp 1s ease 0.8s backwards;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: var(--radius-moyen);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition-moyenne);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primaire {
+    background-color: white;
+    color: var(--couleur-primaire);
+}
+
+.btn-primaire:hover {
+    background-color: var(--couleur-fond);
+    transform: translateY(-3px);
+    box-shadow: var(--ombre-forte);
+}
+
+.btn-secondaire {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondaire:hover {
+    background-color: white;
+    color: var(--couleur-primaire);
+    transform: translateY(-3px);
+}
+
+.btn-petit {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* Cartes de présentation rapide */
+.apercu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.apercu-carte {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--ombre-legere);
+    transition: var(--transition-moyenne);
+    border: 1px solid var(--couleur-bordure);
+}
+
+.apercu-carte:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--ombre-forte);
+}
+
+.apercu-carte .icone {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-accent) 100%);
+    border-radius: var(--radius-rond);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.apercu-carte h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--couleur-texte);
+}
+
+.apercu-carte p {
+    color: var(--couleur-texte-clair);
+    margin-bottom: 20px;
+}
+
+/* ========== PAGE CV ========== */
+.cv-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.cv-sidebar {
+    background: linear-gradient(180deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
+    color: white;
+    border-radius: var(--radius-grand);
+    padding: 40px 30px;
+    height: fit-content;
+    position: sticky;
+    top: 90px;
+}
+
+.cv-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: var(--radius-rond);
+    border: 4px solid white;
+    margin: 0 auto 25px;
+    display: block;
+    object-fit: cover;
+}
+
+.cv-nom {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.cv-titre {
+    text-align: center;
+    opacity: 0.9;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.cv-section {
+    margin-bottom: 30px;
+}
+
+.cv-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cv-info-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cv-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+}
+
+.cv-info-item i {
+    width: 20px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Barres de compétences */
+.competence-item {
+    margin-bottom: 18px;
+}
+
+.competence-nom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.competence-barre {
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.competence-progression {
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.5s ease;
+}
+
+/* Contenu principal du CV */
+.cv-main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cv-bloc {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    padding: 35px;
+    box-shadow: var(--ombre-legere);
+    border: 1px solid var(--couleur-bordure);
+}
+
+.cv-bloc h2 {
+    font-size: 1.5rem;
+    color: var(--couleur-primaire);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 35px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    bottom: 5px;
+    width: 3px;
+    background: linear-gradient(180deg, var(--couleur-primaire) 0%, var(--couleur-accent) 100%);
+    border-radius: 3px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    animation: slideInLeft 0.6s ease backwards;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--couleur-primaire);
+    border-radius: var(--radius-rond);
+    border: 3px solid var(--couleur-fond-carte);
+}
+
+.timeline-date {
+    display: inline-block;
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.timeline-titre {
+    font-size: 1.2rem;
+    color: var(--couleur-texte);
+    margin-bottom: 5px;
+}
+
+.timeline-lieu {
+    color: var(--couleur-texte-clair);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.timeline-description {
+    color: var(--couleur-texte);
+    line-height: 1.7;
+}
+
+/* Tags de compétences */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag {
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition-moyenne);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tag:hover {
+    transform: scale(1.05);
+    box-shadow: var(--ombre-moyenne);
+}
+
+.tag-outline {
+    background: transparent;
+    color: var(--couleur-primaire);
+    border: 2px solid var(--couleur-primaire);
+}
+
+.tag-outline:hover {
+    background: var(--couleur-primaire);
+    color: white;
+}
+
+/* ========== PAGE PROJETS ========== */
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 35px;
+}
+
+.projet-carte {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    overflow: hidden;
+    box-shadow: var(--ombre-legere);
+    border: 1px solid var(--couleur-bordure);
+    transition: var(--transition-moyenne);
+}
+
+.projet-carte:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--ombre-forte);
+}
+
+.projet-image {
+    height: 200px;
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.projet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projet-image .placeholder-icon {
+    opacity: 0.5;
+}
+
+.projet-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition-moyenne);
+}
+
+.projet-carte:hover .projet-overlay {
+    opacity: 1;
+}
+
+.projet-overlay .btn {
+    transform: translateY(20px);
+    transition: var(--transition-moyenne);
+}
+
+.projet-carte:hover .projet-overlay .btn {
+    transform: translateY(0);
+}
+
+.projet-contenu {
+    padding: 25px;
+}
+
+.projet-categorie {
+    display: inline-block;
+    background-color: var(--couleur-accent);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.projet-titre {
+    font-size: 1.3rem;
+    color: var(--couleur-texte);
+    margin-bottom: 12px;
+}
+
+.projet-description {
+    color: var(--couleur-texte-clair);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.projet-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.projet-tech {
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    border: 1px solid var(--couleur-bordure);
+}
+
+.projet-liens {
+    display: flex;
+    gap: 15px;
+}
+
+.projet-lien {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--couleur-primaire);
+    font-weight: 500;
+    transition: var(--transition-rapide);
+}
+
+.projet-lien:hover {
+    color: var(--couleur-primaire-fonce);
+}
+
+/* Message projet vide */
+.projet-vide {
+    grid-column: 1 / -1;
+    background-color: var(--couleur-fond-carte);
+    border: 2px dashed var(--couleur-bordure);
+    border-radius: var(--radius-moyen);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.projet-vide i {
+    font-size: 4rem;
+    color: var(--couleur-texte-clair);
+    margin-bottom: 20px;
+}
+
+.projet-vide h3 {
+    color: var(--couleur-texte);
+    margin-bottom: 10px;
+}
+
+.projet-vide p {
+    color: var(--couleur-texte-clair);
+}
+
+/* ========== PAGE CERTIFICATIONS ========== */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.certification-carte {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    padding: 30px;
+    box-shadow: var(--ombre-legere);
+    border: 1px solid var(--couleur-bordure);
+    transition: var(--transition-moyenne);
+    position: relative;
+    overflow: hidden;
+}
+
+.certification-carte:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre-forte);
+}
+
+.certification-carte::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--couleur-primaire) 0%, var(--couleur-accent) 100%);
+}
+
+.certification-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.certification-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-moyen);
+    object-fit: contain;
+    background-color: var(--couleur-fond);
+    padding: 10px;
+}
+
+.certification-logo-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-moyen);
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.certification-info h3 {
+    font-size: 1.2rem;
+    color: var(--couleur-texte);
+    margin-bottom: 5px;
+}
+
+.certification-organisme {
+    color: var(--couleur-texte-clair);
+    font-size: 0.95rem;
+}
+
+.certification-details {
+    margin-bottom: 20px;
+}
+
+.certification-details p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: var(--couleur-texte);
+}
+
+.certification-details i {
+    color: var(--couleur-primaire);
+    width: 20px;
+}
+
+.certification-statut {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.statut-obtenu {
+    background-color: #d1fae5;
+    color: var(--couleur-succes);
+}
+
+.statut-en-cours {
+    background-color: #fef3c7;
+    color: var(--couleur-warning);
+}
+
+.statut-prevu {
+    background-color: #e0e7ff;
+    color: var(--couleur-primaire);
+}
+
+/* ========== PAGE VEILLE ========== */
+.veille-intro {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: var(--ombre-legere);
+    border-left: 5px solid var(--couleur-primaire);
+}
+
+.veille-intro h2 {
+    color: var(--couleur-primaire);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.veille-intro p {
+    color: var(--couleur-texte);
+    line-height: 1.8;
+}
+
+.veille-sources {
+    margin-bottom: 50px;
+}
+
+.veille-sources h2 {
+    font-size: 1.5rem;
+    color: var(--couleur-primaire);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.source-carte {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    padding: 25px;
+    text-align: center;
+    box-shadow: var(--ombre-legere);
+    border: 1px solid var(--couleur-bordure);
+    transition: var(--transition-moyenne);
+}
+
+.source-carte:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ombre-moyenne);
+    border-color: var(--couleur-primaire);
+}
+
+.source-carte i {
+    font-size: 2.5rem;
+    color: var(--couleur-primaire);
+    margin-bottom: 15px;
+}
+
+.source-carte h4 {
+    color: var(--couleur-texte);
+    margin-bottom: 8px;
+}
+
+.source-carte p {
+    color: var(--couleur-texte-clair);
+    font-size: 0.9rem;
+}
+
+/* Articles de veille */
+.veille-articles h2 {
+    font-size: 1.5rem;
+    color: var(--couleur-primaire);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.articles-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.article-carte {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    padding: 30px;
+    box-shadow: var(--ombre-legere);
+    border: 1px solid var(--couleur-bordure);
+    transition: var(--transition-moyenne);
+}
+
+.article-carte:hover {
+    box-shadow: var(--ombre-moyenne);
+}
+
+.article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.article-titre {
+    font-size: 1.3rem;
+    color: var(--couleur-texte);
+}
+
+.article-meta {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.article-date, .article-source {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--couleur-texte-clair);
+    font-size: 0.9rem;
+}
+
+.article-resume {
+    color: var(--couleur-texte);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.article-theme {
+    display: inline-block;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-primaire);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid var(--couleur-primaire);
+}
+
+/* ========== PAGE STAGES ========== */
+.stages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.stage-carte {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    overflow: hidden;
+    box-shadow: var(--ombre-legere);
+    border: 1px solid var(--couleur-bordure);
+}
+
+.stage-header {
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
+    color: white;
+    padding: 30px;
+}
+
+.stage-entreprise {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stage-poste {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-bottom: 10px;
+}
+
+.stage-periode {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.9;
+}
+
+.stage-contenu {
+    padding: 30px;
+}
+
+.stage-section {
+    margin-bottom: 25px;
+}
+
+.stage-section:last-child {
+    margin-bottom: 0;
+}
+
+.stage-section h4 {
+    color: var(--couleur-primaire);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stage-section ul {
+    padding-left: 25px;
+}
+
+.stage-section li {
+    color: var(--couleur-texte);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.stage-section li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--couleur-primaire);
+}
+
+/* Message pas d'expérience */
+.pas-experience {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: var(--ombre-legere);
+    border: 2px dashed var(--couleur-bordure);
+}
+
+.pas-experience i {
+    font-size: 4rem;
+    color: var(--couleur-primaire);
+    margin-bottom: 25px;
+}
+
+.pas-experience h3 {
+    color: var(--couleur-texte);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.pas-experience p {
+    color: var(--couleur-texte-clair);
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.8;
+}
+
+/* ========== PAGE PASSIONS ========== */
+.passions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.passion-carte {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    overflow: hidden;
+    box-shadow: var(--ombre-legere);
+    border: 1px solid var(--couleur-bordure);
+    transition: var(--transition-moyenne);
+}
+
+.passion-carte:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--ombre-forte);
+}
+
+.passion-image {
+    height: 180px;
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-accent) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+}
+
+.passion-contenu {
+    padding: 25px;
+}
+
+.passion-titre {
+    font-size: 1.3rem;
+    color: var(--couleur-texte);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.passion-description {
+    color: var(--couleur-texte-clair);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.passion-competences {
+    border-top: 1px solid var(--couleur-bordure);
+    padding-top: 15px;
+}
+
+.passion-competences h5 {
+    color: var(--couleur-texte);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.passion-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.passion-tag {
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: 1px solid var(--couleur-bordure);
+}
+
+/* ========== PAGE CONTACT ========== */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-info {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    padding: 40px;
+    box-shadow: var(--ombre-legere);
+    border: 1px solid var(--couleur-bordure);
+}
+
+.contact-info h2 {
+    color: var(--couleur-primaire);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info > p {
+    color: var(--couleur-texte-clair);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contact-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-item .icone {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-accent) 100%);
+    border-radius: var(--radius-moyen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contact-item-info h4 {
+    color: var(--couleur-texte);
+    margin-bottom: 5px;
+}
+
+.contact-item-info p,
+.contact-item-info a {
+    color: var(--couleur-texte-clair);
+    transition: var(--transition-rapide);
+}
+
+.contact-item-info a:hover {
+    color: var(--couleur-primaire);
+}
+
+.reseaux-sociaux h3 {
+    color: var(--couleur-texte);
+    margin-bottom: 20px;
+}
+
+.reseaux-liste {
+    display: flex;
+    gap: 15px;
+}
+
+.reseau-lien {
+    width: 50px;
+    height: 50px;
+    background-color: var(--couleur-fond);
+    border-radius: var(--radius-moyen);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--couleur-primaire);
+    font-size: 1.3rem;
+    transition: var(--transition-moyenne);
+    border: 1px solid var(--couleur-bordure);
+}
+
+.reseau-lien:hover {
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-accent) 100%);
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Formulaire de contact */
+.contact-formulaire {
+    background-color: var(--couleur-fond-carte);
+    border-radius: var(--radius-moyen);
+    padding: 40px;
+    box-shadow: var(--ombre-legere);
+    border: 1px solid var(--couleur-bordure);
+}
+
+.contact-formulaire h2 {
+    color: var(--couleur-primaire);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-groupe {
+    margin-bottom: 25px;
+}
+
+.form-groupe label {
+    display: block;
+    color: var(--couleur-texte);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.form-groupe input,
+.form-groupe textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid var(--couleur-bordure);
+    border-radius: var(--radius-moyen);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition-rapide);
+    background-color: var(--couleur-fond);
+}
+
+.form-groupe input:focus,
+.form-groupe textarea:focus {
+    outline: none;
+    border-color: var(--couleur-primaire);
+    background-color: white;
+}
+
+.form-groupe textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-envoyer {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
+    color: white;
+    border: none;
+    border-radius: var(--radius-moyen);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-moyenne);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-envoyer:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--ombre-forte);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, #1e3a8a 100%);
+    color: white;
+    padding: 50px 20px 30px;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--couleur-accent);
+    border-radius: 2px;
+}
+
+.footer-section p {
+    opacity: 0.9;
+    line-height: 1.7;
+}
+
+.footer-liens {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-liens a {
+    opacity: 0.9;
+    transition: var(--transition-rapide);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-liens a:hover {
+    opacity: 1;
+    padding-left: 10px;
+}
+
+.footer-contact-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0.9;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    opacity: 0.8;
+}
+
+.footer-bottom-liens {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-bottom-liens a {
+    opacity: 0.8;
+    transition: var(--transition-rapide);
+}
+
+.footer-bottom-liens a:hover {
+    opacity: 1;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Classes d'animation réutilisables */
+.animate-fadeIn { animation: fadeIn 0.8s ease; }
+.animate-fadeInUp { animation: fadeInUp 0.8s ease; }
+.animate-slideInLeft { animation: slideInLeft 0.8s ease; }
+.animate-scaleIn { animation: scaleIn 0.8s ease; }
+
+/* Animation au scroll (à activer avec JavaScript) */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 992px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cv-sidebar {
+        position: static;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Navigation mobile */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        gap: 10px;
+        transition: var(--transition-moyenne);
+    }
+    
+    nav ul.active {
+        left: 0;
+    }
+    
+    nav ul li a {
+        font-size: 1.2rem;
+        padding: 15px 30px;
+    }
+    
+    /* Hero */
+    .hero {
+        padding: 50px 25px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero .sous-titre {
+        font-size: 1.1rem;
+    }
+    
+    /* Sections */
+    .section-titre {
+        font-size: 1.6rem;
+    }
+    
+    /* Projets */
+    .projets-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Footer */
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-container {
+        padding: 0 15px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    main {
+        padding: 25px 15px;
+    }
+    
+    .hero {
+        padding: 40px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+    
+    .hero-photo {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .cv-sidebar {
+        padding: 30px 20px;
+    }
+    
+    .cv-bloc {
+        padding: 25px 20px;
+    }
+}
+
+/* ========== UTILITAIRES ========== */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mt-1 { margin-top: 10px; }
+.mt-2 { margin-top: 20px; }
+.mt-3 { margin-top: 30px; }
+.mb-1 { margin-bottom: 10px; }
+.mb-2 { margin-bottom: 20px; }
+.mb-3 { margin-bottom: 30px; }
+
+.hidden { display: none; }
+.visible { display: block; }
+```
+
+---
+
+## 2. index.html (Page d'accueil)
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de [Ton Nom] - Étudiant en informatique. Découvrez mes projets, compétences et parcours.">
+    <meta name="author" content="Ton Nom">
+    <title>Portfolio - Ton Nom | Accueil</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>&lt;/&gt;</span> Ton<span>Nom</span>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="cv.html"><i class="fas fa-user"></i> CV</a></li>
+                    <li><a href="projets.html"><i class="fas fa-code"></i> Projets</a></li>
+                    <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+                    <li><a href="veille.html"><i class="fas fa-rss"></i> Veille</a></li>
+                    <li><a href="stages.html"><i class="fas fa-briefcase"></i> Stages</a></li>
+                    <li><a href="passions.html"><i class="fas fa-heart"></i> Passions</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== MAIN ========== -->
+    <main>
+        <!-- Section Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <!-- Remplace par ta photo -->
+                <img src="https://via.placeholder.com/180x180/2563eb/ffffff?text=Photo" 
+                     alt="Photo de profil" 
+                     class="hero-photo">
+                
+                <h1>Bonjour, je suis <span>Prénom NOM</span></h1>
+                
+                <p class="sous-titre">
+                    <i class="fas fa-graduation-cap"></i> 
+                    Étudiant en BTS SIO option SLAM / SISR
+                </p>
+                
+                <p class="description">
+                    Passionné par le développement web, la cybersécurité et les nouvelles technologies, 
+                    je vous présente ici mon parcours, mes projets et mes compétences. 
+                    Ce portfolio a été réalisé dans le cadre de l'épreuve E5 du BTS SIO.
+                </p>
+                
+                <div class="btn-group">
+                    <a href="cv.html" class="btn btn-primaire">
+                        <i class="fas fa-user"></i> Voir mon CV
+                    </a>
+                    <a href="projets.html" class="btn btn-secondaire">
+                        <i class="fas fa-folder-open"></i> Mes projets
+                    </a>
+                    <a href="contact.html" class="btn btn-secondaire">
+                        <i class="fas fa-paper-plane"></i> Me contacter
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Aperçu -->
+        <section class="reveal">
+            <h2 class="section-titre"><i class="fas fa-th-large"></i> Découvrir mon portfolio</h2>
+            
+            <div class="apercu-grid">
+                <!-- Carte CV -->
+                <a href="cv.html" class="apercu-carte">
+                    <div class="icone">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Mon CV</h3>
+                    <p>Découvrez mon parcours scolaire, mes compétences techniques et mes expériences.</p>
+                    <span class="btn btn-petit btn-primaire">Consulter</span>
+                </a>
+                
+                <!-- Carte Projets -->
+                <a href="projets.html" class="apercu-carte">
+                    <div class="icone">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Mes Projets</h3>
+                    <p>Explorez les projets réalisés en cours et personnellement : sites web, applications, scripts...</p>
+                    <span class="btn btn-petit btn-primaire">Voir les projets</span>
+                </a>
+                
+                <!-- Carte Certifications -->
+                <a href="certifications.html" class="apercu-carte">
+                    <div class="icone">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Certifications</h3>
+                    <p>MOOCs et certifications obtenus ou en cours : PIX, ANSSI, CISCO, et autres.</p>
+                    <span class="btn btn-petit btn-primaire">Découvrir</span>
+                </a>
+                
+                <!-- Carte Veille -->
+                <a href="veille.html" class="apercu-carte">
+                    <div class="icone">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Veille Technologique</h3>
+                    <p>Ma veille sur l'actualité du numérique, de la cybersécurité et du développement.</p>
+                    <span class="btn btn-petit btn-primaire">Lire</span>
+                </a>
+                
+                <!-- Carte Stages -->
+                <a href="stages.html" class="apercu-carte">
+                    <div class="icone">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Stages & Expériences</h3>
+                    <p>Mes expériences professionnelles, stages en entreprise et missions réalisées.</p>
+                    <span class="btn btn-petit btn-primaire">En savoir plus</span>
+                </a>
+                
+                <!-- Carte Passions -->
+                <a href="passions.html" class="apercu-carte">
+                    <div class="icone">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Mes Passions</h3>
+                    <p>Découvrez mes centres d'intérêt, hobbies et ce qui me passionne au quotidien.</p>
+                    <span class="btn btn-petit btn-primaire">Découvrir</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section Compétences rapides -->
+        <section class="reveal">
+            <h2 class="section-titre"><i class="fas fa-code"></i> Compétences clés</h2>
+            
+            <div class="tags-container" style="justify-content: center;">
+                <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+                <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                <span class="tag"><i class="fab fa-python"></i> Python</span>
+                <span class="tag"><i class="fab fa-php"></i> PHP</span>
+                <span class="tag"><i class="fas fa-database"></i> MySQL</span>
+                <span class="tag"><i class="fab fa-git-alt"></i> Git</span>
+                <span class="tag"><i class="fas fa-network-wired"></i> Réseaux</span>
+                <span class="tag"><i class="fas fa-shield-alt"></i> Cybersécurité</span>
+                <span class="tag"><i class="fab fa-linux"></i> Linux</span>
+                <span class="tag"><i class="fab fa-windows"></i> Windows</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="footer-container">
+            <!-- Section À propos -->
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>
+                    Portfolio réalisé dans le cadre de l'épreuve E5 du BTS SIO. 
+                    Ce site présente mon parcours, mes compétences et mes projets.
+                </p>
+            </div>
+            
+            <!-- Section Navigation -->
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <div class="footer-liens">
+                    <a href="index.html"><i class="fas fa-chevron-right"></i> Accueil</a>
+                    <a href="cv.html"><i class="fas fa-chevron-right"></i> CV</a>
+                    <a href="projets.html"><i class="fas fa-chevron-right"></i> Projets</a>
+                    <a href="certifications.html"><i class="fas fa-chevron-right"></i> Certifications</a>
+                    <a href="veille.html"><i class="fas fa-chevron-right"></i> Veille</a>
+                    <a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a>
+                </div>
+            </div>
+            
+            <!-- Section Contact -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-contact-liste">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>prenom.nom@email.com</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ville, France</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Prénom NOM - Tous droits réservés</p>
+            <div class="footer-bottom-liens">
+                <a href="#">Mentions légales</a>
+                <a href="#">Portfolio E5 - BTS SIO</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+```
+
+---
+
+## 4. cv.html (Page CV)
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV de [Ton Nom] - Parcours, compétences et formations">
+    <title>Portfolio - Ton Nom | CV</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>&lt;/&gt;</span> Ton<span>Nom</span>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="cv.html" class="active"><i class="fas fa-user"></i> CV</a></li>
+                    <li><a href="projets.html"><i class="fas fa-code"></i> Projets</a></li>
+                    <li><a href="certifications.html"><i class="fas fa-certificate"></i> Certifications</a></li>
+                    <li><a href="veille.html"><i class="fas fa-rss"></i> Veille</a></li>
+                    <li><a href="stages.html"><i class="fas fa-briefcase"></i> Stages</a></li>
+                    <li><a href="passions.html"><i class="fas fa-heart"></i> Passions</a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <h1 class="section-titre"><i class="fas fa-id-card"></i> Mon Curriculum Vitae</h1>
+        
+        <div class="cv-container">
+            <!-- Sidebar CV -->
+            <aside class="cv-sidebar">
+                <img src="https://via.placeholder.com/150x150/ffffff/2563eb?text=Photo" 
+                     alt="Photo de profil" 
+                     class="cv-photo">
+                
+                <h2 class="cv-nom">Prénom NOM</h2>
+                <p class="cv-titre">Étudiant BTS SIO - SLAM/SISR</p>
+                
+                <!-- Informations personnelles -->
+                <div class="cv-section">
+                    <h3><i class="fas fa-user"></i> Informations</h3>
+                    <div class="cv-info-liste">
+                        <div class="cv-info-item">
+                            <i class="fas fa-birthday-cake"></i>
+                            <span>XX ans</span>
+                        </div>
+                        <div class="cv-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Ville, France</span>
+                        </div>
+                        <div class="cv-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>email@exemple.com</span>
+                        </div>
+                        <div class="cv-info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>06 XX XX XX XX</span>
+                        </div>
+                        <div class="cv-info-item">
+                            <i class="fas fa-car"></i>
+                            <span>Permis B</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Langues -->
+                <div class="cv-section">
+                    <h3><i class="fas fa-language"></i> Langues</h3>
+                    
+                    <div class="competence-item">
+                        <div class="competence-nom">
+                            <span>Français</span>
+                            <span>Natif</span>
+                        </div>
+                        <div class="competence-barre">
+                            <div class="competence-progression" data-pourcentage="100"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="competence-item">
+                        <div class="competence-nom">
+                            <span>Anglais</span>
+                            <span>B2</span>
+                        </div>
+                        <div class="competence-barre">
+                            <div class="competence-progression" data-pourcentage="75"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="competence-item">
+                        <div class="competence-nom">
+                            <span>Espagnol</span>
+                            <span>A2</span>
+                        </div>
+                        <div class="competence-barre">
+                            <div class="competence-progression" data-pourcentage="40"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Compétences techniques -->
+                <div class="cv-section">
+                    <h3><i class="fas fa-code"></i> Compétences</h3>
+                    
+                    <div class="competence-item">
+                        <div class="competence-nom">
+                            <span>HTML / CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="competence-barre">
+                            <div class="competence-progression" data-pourcentage="90"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="competence-item">
+                        <div class="competence-nom">
+                            <span>JavaScript</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="competence-barre">
+                            <div class="competence-progression" data-pourcentage="70"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="competence-item">
+                        <div class="competence-nom">
+                            <span>Python</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="competence-barre">
+                            <div class="competence-progression" data-pourcentage="75"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="competence-item">
+                        <div class="competence-nom">
+                            <span>PHP / MySQL</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="competence-barre">
+                            <div class="competence-progression" data-pourcentage="65"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="competence-item">
+                        <div class="competence-nom">
+                            <span>Réseaux</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="competence-barre">
+                            <div class="competence-progression" data-pourcentage="60"></div>
+                        </div>
+                    </div>
+                </div>

@@ -17,9 +17,10 @@ h1 {
     font-size: 16px;
     color: purple;
     text-align: center;
-    text-indent: 20px;
-    margin-bottom: 20px;
 }
+
+.sous-titre-centre:first-child { text-indent: 20px; }
+.sous-titre-centre:last-of-type { margin-bottom: 20px; }
 
 .paragraphe-intro {
     font-family: Arial, sans-serif;
@@ -30,7 +31,7 @@ h1 {
 }
 
 .paragraphe-special {
-    font-family: "Times New Roman", sans-serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 12px;
     font-style: italic;
     margin-left: 1cm;
@@ -53,9 +54,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.paragraphe-puce li {
-    text-indent: 0;
-}
+.paragraphe-puce li { text-indent: 0; }
 
 .sections-principales {
     list-style-type: decimal;
@@ -66,7 +65,7 @@ h1 {
     font-family: Arial, sans-serif;
     font-size: 15px;
     color: blue;
-    font-weight: bold;  
+    font-weight: bold;
 }
 
 .liste-sous-titres {
@@ -78,4 +77,33 @@ h1 {
     font-size: 13px;
     text-decoration: underline;
     margin-bottom: 5px;
+}
+
+h1:hover,
+.sous-titre-centre:hover,
+.sections-principales li:hover,
+.liste-sous-titres li:hover {
+    color: green;
+}
+
+h1:active,
+.sous-titre-centre:active,
+.sections-principales li:active,
+.liste-sous-titres li:active {
+    text-decoration: underline;
+}
+
+.paragraphe-intro:hover,
+.paragraphe-special:hover,
+.paragraphe-standard:hover,
+.paragraphe-puce li:hover {
+    font-style: italic;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: none;
 }
