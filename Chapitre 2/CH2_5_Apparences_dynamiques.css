@@ -1,0 +1,81 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12px;
+    text-align: justify;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+    background-color: lightyellow;
+}
+
+.sous-titre-centre {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: purple;
+    text-align: center;
+    text-indent: 20px;
+    margin-bottom: 20px;
+}
+
+.paragraphe-intro {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    text-indent: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.paragraphe-special {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 1cm;
+    margin-right: 1cm;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.paragraphe-standard {
+    text-indent: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.paragraphe-puce {
+    list-style-type: disc;
+    list-style-position: inside;
+    color: lightblue;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.paragraphe-puce li {
+    text-indent: 0;
+}
+
+.sections-principales {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.sections-principales li {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: blue;
+    font-weight: bold;  
+}
+
+.liste-sous-titres {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.liste-sous-titres li {
+    font-size: 13px;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}

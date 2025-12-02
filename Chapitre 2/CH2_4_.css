@@ -1,0 +1,34 @@
+body {
+    background-color: gray;
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 20px;
+}
+
+article {
+    margin: 35px;
+    padding: 20px;
+    border: 10px dashed orange;
+    background-image: url('../Images/pingouin.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
+}
+
+.article1 {
+    background-color: teal;
+    background-clip: border-box;
+    background-origin: border-box;
+}
+
+.article2 {
+    background-color: green;
+    background-clip: padding-box;
+    background-origin: padding-box;
+}
+
+.article3 {
+    background-color: purple;
+    background-clip: content-box;
+    background-origin: content-box;
+}
