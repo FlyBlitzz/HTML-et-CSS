@@ -4,17 +4,28 @@
     box-sizing: border-box;
 }
 
+:root {
+    --couleur-or: #D4AF37;
+    --couleur-or-fonce: #B8860B;
+    --couleur-fond: #fffdf0;
+    --couleur-texte: #333;
+    --couleur-accent: #E6C200;
+    --couleur-secondaire: #f0f0f0;
+    --couleur-menu: #222;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    color: black;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
     scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
-    color: #2c3e50;
+    color: var(--couleur-or-fonce);
 }
 
 h1 {
@@ -36,7 +47,7 @@ h2::after {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: #3498db;
+    background: var(--couleur-or);
 }
 
 .container {
@@ -48,8 +59,8 @@ h2::after {
 
 .btn {
     display: inline-block;
-    background: #3498db;
-    color: white;
+    background: var(--couleur-or);
+    color: #fff;
     padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
@@ -59,19 +70,20 @@ h2::after {
 }
 
 .btn:hover {
-    background: #2980b9;
+    background: var(--couleur-or-fonce);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
-/* ====================== HEADER & MENU ====================== */
+/* ====================== MENU ====================== */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(44, 62, 80, 0.95);
+    background: rgba(34, 34, 34, 0.95);
     z-index: 1000;
     backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -79,6 +91,7 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 15px;
+    flex-wrap: wrap;
 }
 
 nav li {
@@ -86,7 +99,7 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
     transition: 0.3s;
@@ -95,7 +108,7 @@ nav a {
 }
 
 nav a:hover {
-    background: rgba(255,255,255,0.1);
+    background: var(--couleur-or);
 }
 
 /* ====================== SECTIONS ====================== */
@@ -107,18 +120,13 @@ nav a:hover {
 }
 
 #accueil {
-    background: linear-gradient(135deg, #3498db, #2c3e50);
-    color: white;
+    background: linear-gradient(135deg, var(--couleur-or), var(--couleur-or-fonce));
+    color: #fff;
     text-align: center;
 }
 
-#accueil h1 {
-    color: white;
-    margin: 20px 0;
-}
-
 #accueil h1 span {
-    color: goldenrod;
+    color: #fff;
 }
 
 #accueil p {
@@ -131,7 +139,7 @@ nav a:hover {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid white;
+    border: 3px solid var(--couleur-or);
     margin-bottom: 20px;
 }
 
@@ -150,19 +158,19 @@ nav a:hover {
 
 .objectifs li {
     padding: 8px 0;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid var(--couleur-secondaire);
     position: relative;
     padding-left: 25px;
 }
 
 .objectifs li::before {
     content: "✓";
-    color: mediumseagreen;
+    color: var(--couleur-or);
     position: absolute;
     left: 0;
 }
 
-/* ====================== COMPÉTENCES (CV) ====================== */
+/* ====================== COMPÉTENCES ====================== */
 .skills .skill {
     margin: 15px 0;
 }
@@ -175,14 +183,14 @@ nav a:hover {
 
 .skill-bar {
     height: 20px;
-    background: lightgrey;
+    background: var(--couleur-secondaire);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .skill-progress {
     height: 100%;
-    background: linear-gradient(90deg, #3498db, #63B3ED);
+    background: var(--couleur-or);
     width: 0;
     animation: progressBar 1.5s ease-in-out forwards;
     border-radius: 10px;
@@ -196,11 +204,11 @@ nav a:hover {
 .formation .item {
     margin: 15px 0;
     padding: 10px;
-    background: whitesmoke;
-    border-left: 4px solid #3498db;
+    background: var(--couleur-secondaire);
+    border-left: 4px solid var(--couleur-or);
 }
 
-/* ====================== CARTES (CERTIFICATIONS & PROJETS) ====================== */
+/* ====================== CARTES ====================== */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -209,18 +217,19 @@ nav a:hover {
 }
 
 .card {
-    background: white;
+    background: #fff;
     border-radius: 10px;
     padding: 25px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
-    border: 1px solid #eee;
+    border: 1px solid var(--couleur-secondaire);
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--couleur-or);
 }
 
 .card img {
@@ -232,7 +241,7 @@ nav a:hover {
 }
 
 .card i {
-    color: #3498db;
+    color: var(--couleur-or);
     margin-bottom: 15px;
 }
 
@@ -241,7 +250,7 @@ nav a:hover {
 }
 
 .card a {
-    color: #3498db;
+    color: var(--couleur-or);
     text-decoration: none;
     font-weight: 500;
 }
@@ -258,26 +267,27 @@ nav a:hover {
 }
 
 .info {
-    background: #e3f2fd;
-    border-left: 4px solid #2196f3;
+    background: #fff8e1;
+    border-left: 4px solid var(--couleur-or);
 }
 
 .warning {
-    background: #fff3e0;
-    border-left: 4px solid orange;
+    background: #fff8e1;
+    border-left: 4px solid var(--couleur-or-fonce);
 }
 
-/* ====================== VEILLE TECHNOLOGIQUE ====================== */
+/* ====================== VEILLE ====================== */
 .articles .article {
-    background: white;
+    background: #fff;
     padding: 20px;
     border-radius: 8px;
     margin: 15px 0;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-left: 3px solid var(--couleur-or);
 }
 
 .articles h4 {
-    color: #2c3e50;
+    color: var(--couleur-or-fonce);
 }
 
 /* ====================== PASSIONS ====================== */
@@ -292,24 +302,24 @@ nav a:hover {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    background: rgba(52, 152, 219, 0.1);
+    background: rgba(212, 175, 55, 0.1);
     transition: 0.3s;
 }
 
 .passion:hover {
-    background: rgba(52, 152, 219, 0.2);
+    background: rgba(212, 175, 55, 0.2);
     transform: scale(1.05);
 }
 
 .passion i {
-    color: #3498db;
+    color: var(--couleur-or);
     margin-bottom: 15px;
 }
 
 /* ====================== FOOTER ====================== */
 footer {
-    background: #2c3e50;
-    color: white;
+    background: var(--couleur-menu);
+    color: #fff;
     padding: 20px 0;
     text-align: center;
 }
@@ -319,14 +329,14 @@ footer {
 }
 
 .socials a {
-    color: white;
+    color: #fff;
     font-size: 1.5em;
     margin: 0 10px;
     transition: 0.3s;
 }
 
 .socials a:hover {
-    color: #3498db;
+    color: var(--couleur-or);
 }
 
 /* ====================== RESPONSIVE ====================== */

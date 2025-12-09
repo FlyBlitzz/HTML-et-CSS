@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - Nathanaël Villard</title>
+    <title>Mon Portefolio - Nathanaël Villard</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -14,8 +14,8 @@
     <header>
         <nav id="navbar">
             <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
                 <li><a href="#cv">CV</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projets">Projets</a></li>
@@ -29,10 +29,10 @@
     <!-- ====================== ACCUEIL ====================== -->
     <section id="accueil" class="section">
         <div class="container">
-            <img src="images/handball.jpg" alt="Photo professionnelle" class="photo">
+            <img src="images/handball.jpg" alt="Photo de Nathanaël Villard" class="photo">
             <h1>Bonjour, je suis <span>Nathanaël Villard</span></h1>
-            <p>Étudiant en <strong>BTS SIO</strong> au Lycée Louis Pergaud</p>
-            <p>Développeur passionné par la cybersécurité et l'innovation numérique.</p>
+            <p>Étudiant en <strong>BTS SIO</strong> au Lycée Louis Pergaud.</p>
+            <p>Développeur passionné par l'innovation numérique.</p>
             <a href="#apropos" class="btn">En savoir plus</a>
         </div>
     </section>
@@ -40,25 +40,25 @@
     <!-- ====================== À PROPOS ====================== -->
     <section id="apropos" class="section">
         <div class="container">
-            <h2>À Propos</h2>
+            <h2>À propos</h2>
             <div class="apropos-content">
                 <div class="text">
                     <p>
                         Actuellement en BTS SIO au Lycée Louis Pergaud, je me forme aux métiers du numérique. 
-                        Mon objectif est de devenir <strong>développeur informatique</strong> pour exercer le métier de testeur de logiciels et jeux vidéo.
+                        Mon objectif est de devenir <strong>développeur informatique</strong>, avec un intérêt particulier pour 
+                        les tests de logiciels et de jeux vidéo.
                     </p>
                     <p>
-                        Je suis motivé par la résolution de problèmes techniques et l’apprentissage continu 
-                        Je pratique la programmation en PHP, HTML/CSS
-                        et Python.
+                        Je suis motivé par la résolution de problèmes techniques et l’apprentissage continu.
+                        Je pratique la programmation en <strong>PHP</strong>, <strong>HTML/CSS</strong> et <strong>Python</strong>.
                     </p>
                 </div>
                 <div class="objectifs">
                     <h3>Objectifs</h3>
                     <ul>
-                        <li>Intégrer une licence pro en informatique</li>
-                        <li>Valider les certifications PIX et écri+</li>
-                        <li>Réussir l’épreuve du BTS avec mention</li>
+                        <li>Intégrer une licence professionnelle en informatique</li>
+                        <li>Valider les certifications PIX et Écri+</li>
+                        <li>Réussir le BTS SIO avec mention</li>
                     </ul>
                 </div>
             </div>
@@ -69,24 +69,28 @@
     <section id="cv" class="section">
         <div class="container">
             <h2>Mon CV</h2>
-            
-            <!-- Compétences -->
             <div class="skills">
-                <h3>Compétences Techniques</h3>
+                <h3>Compétences techniques</h3>
                 <div class="skill">
                     <span>Python</span>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 60%"></div>
+                        <div class="skill-progress" style="--level: 50%"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <span>HTML / CSS</span>
                     <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 90%"></div>
+                        <div class="skill-progress" style="--level: 60%"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span>Sécurité (ANSSI)</span>
+                    <span>PHP</span>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="--level: 70%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>Sensibilisation sécurité (ANSSI / CNIL)</span>
                     <div class="skill-bar">
                         <div class="skill-progress" style="--level: 100%"></div>
                     </div>
@@ -96,12 +100,16 @@
             <div class="formation">
                 <h3>Formation</h3>
                 <div class="item">
-                    <h4>Baccalauréat Général - Spécialités Mathématiques, Physique-Chimie et Numérique Sciences Informatiques</h4>
-                    <p>Lycée Algoud Laffemas - 2022 - 2025</p>
+                    <h4>BTS Services Informatiques aux Organisations (SIO)</h4>
+                    <p>Lycée Louis Pergaud – En cours</p>
                 </div>
                 <div class="item">
-                    <h4>Brevet des Collèges - Mention très bien</h4>
-                    <p>Collège Marcel Pagnol - 2022</p>
+                    <h4>Baccalauréat Général – Spécialités Mathématiques, Physique-Chimie et Numérique et Sciences Informatiques</h4>
+                    <p>Lycée Algoud Laffemas – 2022 - 2025</p>
+                </div>
+                <div class="item">
+                    <h4>Diplôme National du Brevet – Mention très bien</h4>
+                    <p>Collège Marcel Pagnol – 2022</p>
                 </div>
             </div>
         </div>
@@ -114,23 +122,26 @@
             <div class="cards">
                 <div class="card">
                     <i class="fas fa-shield-alt fa-2x"></i>
-                    <h3>ANSSI - Sécurité</h3>
+                    <h3>ANSSI – Sensibilisation à la sécurité</h3>
                     <p><strong>Statut :</strong> Validé</p>
-                    <a href="#" target="_blank">Voir le programme</a>
+                    <p>Introduction aux bonnes pratiques de cybersécurité.</p>
+                    <a href="https://secnumacademie.gouv.fr/" target="_blank">Voir le programme</a>
                 </div>
                 
                 <div class="card">
                     <i class="fas fa-laptop-code fa-2x"></i>
-                    <h3>PIX - Niveaux 1 à 8</h3>
+                    <h3>PIX</h3>
                     <p><strong>Statut :</strong> En cours</p>
-                    <a href="https://pix.fr" target="_blank">Voir mon profil</a>
+                    <p>Évaluation de mes compétences numériques (web, bureautique, sécurité, etc.).</p>
+                    <a href="https://pix.fr" target="_blank">Voir la plateforme PIX</a>
                 </div>
                 
                 <div class="card">
-                    <i class="fas fa-shield-alt fa-2x"></i>
-                    <h3>CNIL - Sécurité</h3>
+                    <i class="fas fa-user-shield fa-2x"></i>
+                    <h3>CNIL – Données & vie privée</h3>
                     <p><strong>Statut :</strong> Validé</p>
-                    <a href="#" target="_blank">Voir le programme</a>
+                    <p>Sensibilisation à la protection des données personnelles et au RGPD.</p>
+                    <a href="https://www.cnil.fr/fr/les-controles-de-la-cnil-en-2025" target="_blank">Voir le programme</a>
                 </div>
             </div>
         </div>
@@ -139,22 +150,22 @@
     <!-- ====================== PROJETS ====================== -->
     <section id="projets" class="section">
         <div class="container">
-            <h2>Mes Projets</h2>
+            <h2>Mes projets</h2>
             <div class="cards">
                 <div class="card">
                     <img src="images/projet1.jpg" alt=" ">
-                    <h3></h3>
-                    <p><strong>Technos :</strong> </p>
-                    <p><strong>Mission :</strong> </p>
-                    <a href="https://github.com/FlyBlitzz" target="_blank">Code sur GitHub</a>
+                    <h3>Projet en cours</h3>
+                    <p><strong>Technos :</strong> à définir</p>
+                    <p><strong>Mission :</strong> projet en préparation, détails à venir.</p>
+                    <a href="https://github.com/FlyBlitzz" target="_blank">Voir mon GitHub</a>
                 </div>
 
                 <div class="card">
-                    <img src="images/Portefolio.jpg" alt="Portfolio">
-                    <h3>Mon Portfolio</h3>
+                    <img src="images/Portefolio.jpg" alt="Capture d'écran de mon portfolio">
+                    <h3>Mon portfolio</h3>
                     <p><strong>Technos :</strong> HTML et CSS</p>
-                    <p><strong>Mission :</strong> Création d’un site responsive avec animations.</p>
-                    <a href="https://github.com/FlyBlitzz/HTML-et-CSS/tree/master/Chapitre%203" target="_blank">Code sur GitHub</a>
+                    <p><strong>Mission :</strong> Créer un site responsive avec un design personnalisé et des animations légères.</p>
+                    <a href="https://github.com/FlyBlitzz/HTML-et-CSS/tree/master/Portefolio" target="_blank">Code sur GitHub</a>
                 </div>
             </div>
         </div>
@@ -163,22 +174,28 @@
     <!-- ====================== VEILLE TECHNOLOGIQUE ====================== -->
     <section id="veille" class="section">
         <div class="container">
-            <h2>Veille Technologique</h2>
+            <h2>Veille technologique</h2>
             <div class="alert info">
                 <p></p>
             </div>
             
             <div class="articles">
                 <div class="article">
-                    <h4></h4>
-                    <p><strong>Source :</strong> <a href=" " target="_blank"> </a></p>
-                    <p>Résumé : </p>
+                    <h4>Article à venir n°1</h4>
+                    <p><strong>Source :</strong> <a href="#" target="_blank">Lien à ajouter</a></p>
+                    <p>
+                        Résumé : j’ajouterai ici une synthèse de l’article (contexte, enjeux, 
+                        concepts importants et ce que j’en retiens pour ma pratique).
+                    </p>
                 </div>
                 
                 <div class="article">
-                    <h4></h4>
-                    <p><strong>Source :</strong> <a href=" " target="_blank"> </a></p>
-                    <p>Résumé : </p>
+                    <h4>Article à venir n°2</h4>
+                    <p><strong>Source :</strong> <a href="#" target="_blank">Lien à ajouter</a></p>
+                    <p>
+                        Résumé : cette zone servira à présenter un deuxième article (ou vidéo, podcast, 
+                        rapport).
+                    </p>
                 </div>
             </div>
         </div>
@@ -187,9 +204,10 @@
     <!-- ====================== EXPÉRIENCES ====================== -->
     <section id="experiences" class="section">
         <div class="container">
-            <h2>Expériences Professionnelles</h2>
+            <h2>Expériences professionnelles</h2>
             <div class="alert warning">
-                <p>🔍 Je recherche activement un stage en entreprise. Contactez-moi !</p>
+                <p>Je recherche actuellement un stage en entreprise afin de mettre en pratique mes compétences en développement et en informatique.</p>
+                <p>N’hésitez pas à me contacter pour toute opportunité de stage.</p>
             </div>
         </div>
     </section>
@@ -197,17 +215,17 @@
     <!-- ====================== PASSIONS ====================== -->
     <section id="passions" class="section">
         <div class="container">
-            <h2>Mes Passions</h2>
+            <h2>Mes passions</h2>
             <div class="passions">
                 <div class="passion">
                     <i class="fas fa-running fa-3x"></i>
                     <h3>Handball</h3>
-                    <p>Sportif de haut niveau en National 2.</p>
+                    <p>Pratique à un niveau compétitif (National 2). Le sport m’apprend la rigueur, l’esprit d’équipe et la gestion du stress.</p>
                 </div>
                 <div class="passion">
                     <i class="fas fa-gamepad fa-3x"></i>
                     <h3>Jeux vidéo</h3>
-                    <p>Tout type de jeux plutôt axé en ligne.</p>
+                    <p>Jeux en ligne et compétitifs : ils stimulent ma réactivité, ma stratégie et mon intérêt pour la création de jeux.</p>
                 </div>
             </div>
         </div>
@@ -215,12 +233,12 @@
 
     <!-- ====================== FOOTER ====================== -->
     <footer>
-        <div class="container">
-            <p>© 2025 Nathanaël Villard - Tous droits réservés</p>
+        <div class="container footer-content">
+            <p>© 2025 Nathanaël Villard – Tous droits réservés</p>
             <div class="socials">
-                <a href="https://github.com/FlyBlitzz"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/nathanaël-villard-7070bb37a/"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:nathanael.villard15@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/FlyBlitzz" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/nathanaël-villard-7070bb37a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:nathanael.villard15@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </footer>
