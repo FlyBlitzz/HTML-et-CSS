@@ -1,18 +1,19 @@
-<!DOCTYPE html> <!-- Rajouter des animations -->
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio - Nathanaël Villard</title>
+    <meta name="description" content="Portfolio de Nathanaël Villard : CV, certifications, projets, veille technologique, expériences et passions.">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
+
     <!-- ====================== MENU ====================== -->
     <header>
-        <nav id="navbar">
+        <nav id="navbar" aria-label="Navigation principale">
             <ul>
                 <li><a href="#accueil" class="active">Accueil</a></li>
                 <li><a href="#apropos">À propos</a></li>
@@ -29,7 +30,7 @@
     <!-- ====================== ACCUEIL ====================== -->
     <section id="accueil" class="section">
         <div class="container">
-            <img src="images/handball.jpg" alt="Photo de Nathanaël Villard" class="photo">
+            <img src="Images/handball.jpg" alt="Photo de Nathanaël Villard" class="photo">
             <h1>Bonjour, je suis <span>Nathanaël Villard</span></h1>
             <p>Étudiant en <strong>BTS SIO</strong> au Lycée Louis Pergaud.</p>
             <p>Développeur passionné par l'innovation numérique.</p>
@@ -44,9 +45,9 @@
             <div class="apropos-content">
                 <div class="text">
                     <p>
-                        Actuellement en BTS SIO au Lycée Louis Pergaud, je me forme aux métiers du numérique. 
-                        Mon objectif est de devenir <strong>développeur informatique</strong>, avec un intérêt particulier pour 
-                        les tests de logiciels et de jeux vidéo.
+                        Actuellement en BTS SIO au Lycée Louis Pergaud, je me forme aux métiers du numérique.
+                        Mon objectif est de devenir <strong>développeur informatique</strong>, avec un intérêt particulier
+                        pour les tests de logiciels et de jeux vidéo.
                     </p>
                     <p>
                         Je suis motivé par la résolution de problèmes techniques et l’apprentissage continu.
@@ -65,55 +66,52 @@
         </div>
     </section>
 
-    <!-- ====================== CV ====================== -->
-    <section id="cv" class="section"> <!-- Mettre mon CV -->
-        <div class="container">
-            <h2>Mon CV</h2>
-            <div class="skills">
-                <h3>Compétences techniques</h3>
-                <div class="skill">
-                    <span>Python</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 50%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>HTML / CSS</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 60%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>PHP</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 70%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span>Sensibilisation sécurité (ANSSI / CNIL)</span>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="--level: 100%"></div>
-                    </div>
-                </div>
-            </div>
+<!-- ====================== CV ====================== -->
+<section id="cv" class="section">
+    <div class="container">
+        <h2>Mon CV</h2>
 
-            <div class="formation">
-                <h3>Formation</h3>
-                <div class="item">
-                    <h4>BTS Services Informatiques aux Organisations (SIO)</h4>
-                    <p>Lycée Louis Pergaud – En cours</p>
-                </div>
-                <div class="item">
-                    <h4>Baccalauréat Général – Spécialités Mathématiques, Physique-Chimie et Numérique et Sciences Informatiques</h4>
-                    <p>Lycée Algoud Laffemas – 2022 - 2025</p>
-                </div>
-                <div class="item">
-                    <h4>Diplôme National du Brevet – Mention très bien</h4>
-                    <p>Collège Marcel Pagnol – 2022</p>
+        <div class="cv-container">
+            <div class="cv-viewer" aria-label="Aperçu du CV en PDF">
+                <iframe
+                    src="Docs/CV_Nathanaël_Villard.pdf#view=FitH"
+                    title="CV de Nathanaël Villard"
+                    loading="lazy">
+                </iframe>
+
+                <div class="cv-fallback">
+                    <p>Si le PDF ne s’affiche pas :</p>
+                    <p>
+                        <a class="link" href="Docs/CV_Nathanaël_Villard.pdf" target="_blank" rel="noopener noreferrer">
+                            → Ouvrir le CV (PDF)
+                        </a>
+                    </p>
+                    <p>
+                        <a class="link" href="Images/CV_Nathanaël_Villard.jpg" target="_blank" rel="noopener noreferrer">
+                            → Voir en image
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <div class="formation">
+            <h3>Formation</h3>
+            <div class="item">
+                <h4>BTS Services Informatiques aux Organisations (SIO)</h4>
+                <p>Lycée Louis Pergaud – En cours</p>
+            </div>
+            <div class="item">
+                <h4>Baccalauréat Général – Spécialités Mathématiques, Physique-Chimie et Numérique et Sciences Informatiques</h4>
+                <p>Lycée Algoud Laffemas – 2022 → 2025</p>
+            </div>
+            <div class="item">
+                <h4>Diplôme National du Brevet – Mention très bien</h4>
+                <p>Collège Marcel Pagnol – 2022</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- ====================== CERTIFICATIONS ====================== -->
     <section id="certifications" class="section">
@@ -122,28 +120,73 @@
             <div class="cards">
                 <div class="card">
                     <i class="fas fa-shield-alt fa-2x"></i>
-                    <h3>ANSSI – Sensibilisation à la sécurité</h3>
+                    <h3>ANSSI – SecNumAcadémie</h3>
                     <p><strong>Statut :</strong> Validé</p>
-                    <p>Introduction aux bonnes pratiques de cybersécurité.</p>
-                    <a href="https://secnumacademie.gouv.fr/" target="_blank">Voir le programme</a>
+                    <p>Bonnes pratiques de cybersécurité.</p>
+                    <div class="card-links">
+                        <a href="Docs/VILLARD Nathanaël SIO1 Attestation ANSSI.pdf" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> Attestation (PDF)
+                        </a>
+                        <a href="https://secnumacademie.gouv.fr/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Plateforme
+                        </a>
+                    </div>
                 </div>
-                
+
                 <div class="card">
                     <i class="fas fa-laptop-code fa-2x"></i>
                     <h3>PIX</h3>
                     <p><strong>Statut :</strong> En cours</p>
-                    <p>Évaluation de mes compétences numériques (web, bureautique, sécurité, etc.).</p>
-                    <a href="https://pix.fr" target="_blank">Voir la plateforme PIX</a>
+                    <p>Évaluation de mes compétences numériques.</p>
+                    <div class="card-links">
+                        <a href="https://pix.fr" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Plateforme
+                        </a>
+                    </div>
                 </div>
-                
+
                 <div class="card">
                     <i class="fas fa-user-shield fa-2x"></i>
                     <h3>CNIL – Données & vie privée</h3>
                     <p><strong>Statut :</strong> Validé</p>
-                    <p>Sensibilisation à la protection des données personnelles et au RGPD.</p>
-                    <a href="https://www.cnil.fr/fr/les-controles-de-la-cnil-en-2025" target="_blank">Voir le programme</a>
+                    <p>RGPD, droits, sécurité et protection des données.</p>
+                    <div class="card-links">
+                        <a href="Docs/VILLARD Nathanaël SIO1 Attestation CNIL Module 1.pdf" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> Module 1 (PDF)
+                        </a>
+                        <a href="Docs/VILLARD Nathanaël SIO1 Attestation CNIL Module 2.pdf" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> Module 2 (PDF)
+                        </a>
+                        <a href="Docs/VILLARD Nathanaël SIO1 Attestation CNIL Module 3.pdf" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> Module 3 (PDF)
+                        </a>
+                        <a href="Docs/VILLARD Nathanaël SIO1 Attestation CNIL Module 4.pdf" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> Module 4 (PDF)
+                        </a>
+                        <a href="Docs/VILLARD Nathanaël SIO1 Attestation CNIL Module 5.pdf" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> Module 5 (PDF)
+                        </a>
+                        <a href="Docs/VILLARD Nathanaël SIO1 Attestation CNIL Module 6.pdf" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-file-pdf"></i> Module 6 (PDF)
+                        </a>
+                        <a href="https://www.cnil.fr/fr/comprendre-le-rgpd/le-mooc-de-la-cnil" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ressources CNIL
+                        </a>
+                    </div>
                 </div>
-            </div> <!-- Rajouter écri+ et les pdf de la CNIL/ANSEE -->
+
+                <div class="card">
+                    <i class="fa-solid fa-pen-nib fa-2x"></i>
+                    <h3>Écri+</h3>
+                    <p><strong>Statut :</strong> En cours</p>
+                    <p>Évaluation et progression en expression écrite.</p>
+                    <div class="card-links">
+                        <a href="https://ecriplus.fr" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Plateforme
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -153,19 +196,23 @@
             <h2>Mes projets</h2>
             <div class="cards">
                 <div class="card">
-                    <img src="images/Portfolio.jpg" alt="Capture d'écran de mon portfolio">
+                    <img src="Images/portfolio.jpg" alt="Capture d'écran de mon portfolio">
                     <h3>Mon portfolio</h3>
                     <p><strong>Technos :</strong> HTML et CSS</p>
                     <p><strong>Mission :</strong> Créer un site responsive avec un design personnalisé et des animations légères.</p>
-                    <a href="https://github.com/FlyBlitzz/HTML-et-CSS/tree/master/Portfolio" target="_blank">Code sur GitHub</a>
+                    <a href="https://github.com/FlyBlitzz/HTML-et-CSS/tree/master/Portfolio" target="_blank" rel="noopener noreferrer">
+                        Code sur GitHub
+                    </a>
                 </div>
 
                 <div class="card">
-                    <img src="images/" alt=" ">
-                    <h3>Projet en cours</h3>
+                    <div class="card-placeholder">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3>Projet à venir</h3>
                     <p><strong>Technos :</strong> à définir</p>
-                    <p><strong>Mission :</strong> projet en préparation, détails à venir.</p>
-                    <a href="https://github.com/FlyBlitzz" target="_blank">Voir mon GitHub</a>
+                    <p><strong>Mission :</strong> détails à venir.</p>
+                    <a href="https://github.com/FlyBlitzz" target="_blank" rel="noopener noreferrer">Voir mon GitHub</a>
                 </div>
             </div>
         </div>
@@ -175,20 +222,15 @@
     <section id="veille" class="section">
         <div class="container">
             <h2>Veille technologique</h2>
-            <div class="alert info">
-                <p></p>
-            </div>
-            
             <div class="articles">
                 <div class="article">
                     <h4>Article à venir n°1</h4>
-                    <p><strong>Source :</strong> <a href="#" target="_blank"></a></p>
+                    <p><strong>Source :</strong> <a href="#" target="_blank" rel="noopener noreferrer"></a></p>
                     <p>Résumé : </p>
                 </div>
-                
                 <div class="article">
                     <h4>Article à venir n°2</h4>
-                    <p><strong>Source :</strong> <a href="#" target="_blank"></a></p>
+                    <p><strong>Source :</strong> <a href="#" target="_blank" rel="noopener noreferrer"></a></p>
                     <p>Résumé : </p>
                 </div>
             </div>
@@ -230,8 +272,8 @@
         <div class="container footer-content">
             <p>© 2025 Nathanaël Villard – Tous droits réservés</p>
             <div class="socials">
-                <a href="https://github.com/FlyBlitzz" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/nathanaël-villard-7070bb37a/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/FlyBlitzz" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/nathanaël-villard-7070bb37a/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:nathanael.villard15@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
