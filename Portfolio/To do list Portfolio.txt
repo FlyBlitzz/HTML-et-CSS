@@ -1,0 +1,7 @@
+- Définir BTS SIO
+- Barre de navigation -> surbrillance sur les boutons cliqués = ne pas laisser l'accueil en surbrillance constante
+- CV à mettre en entier sur une page à part
+- Parler plus des jeux vidéo -> dire auxquels je joue
+- Régler le décalage avec le trait blanc en haut et sur tout le site
+- Ajouter la certification EBIOS
+- Ajouter quelque chose pour me contacter
