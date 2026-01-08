@@ -4,7 +4,7 @@ body {
     margin: 0;
     color: white;
     min-height: 1500px;
-    background-image: url('../Images/pingouin.png'), url('../Images/feuilles.png');
+    background-image: url('Images/pingouin.png'), url('Images/feuilles.png');
     background-repeat: no-repeat, repeat;
     background-attachment: fixed, scroll;
     background-position: center top, 0 0;

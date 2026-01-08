@@ -9,7 +9,7 @@ article {
     margin: 35px;
     padding: 20px;
     border: 10px dashed orange;
-    background-image: url('../Images/pingouin.png');
+    background-image: url('Images/pingouin.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top left;

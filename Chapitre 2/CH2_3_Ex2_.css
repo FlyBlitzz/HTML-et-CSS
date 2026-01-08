@@ -4,7 +4,7 @@ body {
     color: black;
     margin: 0;
     padding: 10px;
-    background-image: url('../Images/pingouin.png');
+    background-image: url('Images/pingouin.png');
     background-color: green;
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@ section {
 
 article {
     margin: 30px;
-    background-image: url('../Images/pingouin.png');
+    background-image: url('Images/pingouin.png');
     background-color: red;
     background-repeat: no-repeat;
     background-position: center;
