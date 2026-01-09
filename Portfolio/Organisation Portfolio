@@ -1,5 +1,6 @@
 /Portfolio
   ├── index.html
+  ├── cv.html
   ├── style.css
   ├── Images/
   │   ├── handball.jpg
@@ -13,4 +14,5 @@
       ├── VILLARD Nathanaël SIO1 Attestation CNIL Module 3.pdf
       ├── VILLARD Nathanaël SIO1 Attestation CNIL Module 4.pdf
       ├── VILLARD Nathanaël SIO1 Attestation CNIL Module 5.pdf
-      └── VILLARD Nathanaël SIO1 Attestation CNIL Module 6.pdf
+      ├── VILLARD Nathanaël SIO1 Attestation CNIL Module 6.pdf
+      └── VILLARD Nathanaël SIO1 Attestation EBIOS.pdf
