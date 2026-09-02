@@ -23,13 +23,18 @@ body {
     scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
     color: var(--couleur-or-fonce);
 }
 
-h1 { font-size: 2.5em; }
+h1 {
+    font-size: 2.5em;
+}
 
 h2 {
     text-align: center;
@@ -61,7 +66,10 @@ a.link {
     font-weight: 600;
     text-decoration: none;
 }
-a.link:hover { text-decoration: underline; }
+
+a.link:hover {
+    text-decoration: underline;
+}
 
 /* ====================== BOUTONS ====================== */
 .btn {
@@ -102,7 +110,9 @@ nav ul {
     flex-wrap: wrap;
 }
 
-nav li { margin: 0 15px; }
+nav li {
+    margin: 0 15px;
+}
 
 nav a {
     color: #fff;
@@ -146,7 +156,10 @@ nav a:active {
     text-align: center;
 }
 
-#accueil h1, #accueil p { color: #fff; }
+#accueil h1,
+#accueil p {
+    color: #fff;
+}
 
 #accueil h1 span {
     color: #fff;
@@ -310,12 +323,10 @@ nav a:active {
     width: 120%;
     height: 120%;
     transform: rotate(20deg);
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(212, 175, 55, 0.18),
-        transparent
-    );
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(212, 175, 55, 0.18),
+            transparent);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -350,7 +361,30 @@ nav a:active {
     font-weight: 700;
 }
 
-.card a:hover { text-decoration: underline; }
+.card a:hover {
+    text-decoration: underline;
+}
+
+.experience-projects {
+    margin: 8px 0 14px;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.experience-projects li {
+    position: relative;
+    margin: 10px 0;
+    padding-left: 22px;
+}
+
+.experience-projects li::before {
+    content: "•";
+    position: absolute;
+    left: 4px;
+    color: var(--couleur-or-fonce);
+    font-weight: 700;
+}
 
 .card-links {
     margin-top: 12px;
@@ -403,7 +437,9 @@ nav a:active {
     border-left: 3px solid var(--couleur-or);
 }
 
-.articles h4 { color: var(--couleur-or-fonce); }
+.articles h4 {
+    color: var(--couleur-or-fonce);
+}
 
 /* ====================== PASSIONS ====================== */
 .passions {
@@ -448,7 +484,9 @@ footer {
     flex-wrap: wrap;
 }
 
-.socials { margin-top: 10px; }
+.socials {
+    margin-top: 10px;
+}
 
 .socials a {
     color: #fff;
@@ -464,17 +502,33 @@ footer {
 
 /* ====================== ANIMATIONS ====================== */
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @keyframes shine {
-    0% { transform: translateX(-40%) rotate(20deg); }
-    100% { transform: translateX(40%) rotate(20deg); }
+    0% {
+        transform: translateX(-40%) rotate(20deg);
+    }
+
+    100% {
+        transform: translateX(40%) rotate(20deg);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .photo, .card, .passion, .btn {
+
+    .photo,
+    .card,
+    .passion,
+    .btn {
         animation: none !important;
         transition: none !important;
     }
@@ -497,7 +551,9 @@ footer {
         text-align: center;
     }
 
-    nav li { margin: 5px 0; }
+    nav li {
+        margin: 5px 0;
+    }
 
     .section {
         padding: 60px 0;
@@ -517,7 +573,7 @@ footer {
     .cv-viewer iframe {
         height: 500px;
     }
-    
+
     .cv-actions {
         flex-direction: column;
         align-items: center;
